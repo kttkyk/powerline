@@ -17,7 +17,7 @@ if (
 	and hasattr(vim, 'vvars')
 	and vim.vvars['version'] > 703
 ):
-	if sys.version_info < (3,):
+	if sys.version_info >=(3,):
 		def get_vim_encoding():
 			return vim.options['encoding'] or 'ascii'
 	else:
